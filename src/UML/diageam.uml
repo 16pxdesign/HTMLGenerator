@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1506.5" y="108.0">com.company.Views.PageBuilder</node>
+    <node x="483.0" y="1094.0">com.company.Model.Countries</node>
+    <node x="765.5" y="799.0">com.company.Helpers.Database</node>
+    <node x="447.0" y="821.0">com.company.Model.CountriesList</node>
+    <node x="1957.5" y="-37.0">com.company.Views.ICurrentContactBuilder</node>
+    <node x="1604.5" y="1414.0">com.company.Views.Page</node>
+    <node x="-3.5" y="574.0">com.company.Main</node>
+    <node x="769.0" y="552.0">com.company.Model.ContactsList</node>
+    <node x="1026.5" y="1243.0">com.company.Views.IIndexPageBuilder</node>
+    <node x="1266.2496623142729" y="361.94146780729403">com.company.Model.Contacts</node>
+    <node x="256.0" y="574.0">com.company.Control.Init</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.company.Views.PageBuilder" target="com.company.Model.Contacts">
+      <point x="-120.0" y="92.0" />
+      <point x="1560.0" y="400.0" />
+      <point x="89.5" y="-0.0" />
+    </edge>
+    <edge source="com.company.Control.Init" target="com.company.Views.PageBuilder">
+      <point x="0.0" y="-26.0" />
+      <point x="360.0" y="200.0" />
+      <point x="-173.5" y="-0.0" />
+    </edge>
+    <edge source="com.company.Views.IIndexPageBuilder" target="com.company.Views.Page">
+      <point x="0.0" y="37.0" />
+      <point x="1200.0" y="1426.6666666666667" />
+      <point x="-75.5" y="-13.333333333333336" />
+    </edge>
+    <edge source="com.company.Views.PageBuilder" target="com.company.Views.IIndexPageBuilder">
+      <point x="-40.0" y="92.0" />
+      <point x="1640.0" y="1360.0" />
+      <point x="1240.0" y="1360.0" />
+      <point x="40.0" y="37.0" />
+    </edge>
+    <edge source="com.company.Model.CountriesList" target="com.company.Helpers.Database">
+      <point x="0.0" y="-59.0" />
+      <point x="560.0" y="720.0" />
+      <point x="840.0" y="720.0" />
+      <point x="-40.0" y="-81.0" />
+    </edge>
+    <edge source="com.company.Control.Init" target="com.company.Views.Page">
+      <point x="0.0" y="26.0" />
+      <point x="360.0" y="1440.0" />
+      <point x="-75.5" y="-0.0" />
+    </edge>
+    <edge source="com.company.Views.PageBuilder" target="com.company.Views.ICurrentContactBuilder">
+      <point x="0.0" y="-92.0" />
+      <point x="1680.0" y="26.666666666666742" />
+      <point x="-162.5" y="26.666666666666742" />
+    </edge>
+    <edge source="com.company.Model.CountriesList" target="com.company.Model.Countries">
+      <point x="0.0" y="59.0" />
+      <point x="0.0" y="-26.0" />
+    </edge>
+    <edge source="com.company.Model.ContactsList" target="com.company.Model.Contacts">
+      <point x="111.0" y="-0.0" />
+      <point x="1120.0" y="600.0" />
+      <point x="-80.0" y="48.0" />
+    </edge>
+    <edge source="com.company.Views.PageBuilder" target="com.company.Views.Page">
+      <point x="173.5" y="40.0" />
+      <point x="1920.0" y="240.0" />
+      <point x="1920.0" y="1426.6666666666667" />
+      <point x="75.5" y="-13.333333333333336" />
+    </edge>
+    <edge source="com.company.Helpers.Database" target="com.company.Model.Contacts">
+      <point x="114.5" y="-0.0" />
+      <point x="1146.6666666666667" y="880.0" />
+      <point x="-53.33333333333326" y="48.0" />
+    </edge>
+    <edge source="com.company.Views.ICurrentContactBuilder" target="com.company.Views.Page">
+      <point x="0.0" y="37.0" />
+      <point x="2120.0" y="1440.0" />
+      <point x="75.5" y="-0.0" />
+    </edge>
+    <edge source="com.company.Control.Init" target="com.company.Model.Contacts">
+      <point x="40.0" y="-26.0" />
+      <point x="400.0" y="400.0" />
+      <point x="-89.5" y="-0.0" />
+    </edge>
+    <edge source="com.company.Control.Init" target="com.company.Model.ContactsList">
+      <point x="104.0" y="-0.0" />
+      <point x="-111.0" y="-0.0" />
+    </edge>
+    <edge source="com.company.Helpers.Database" target="com.company.Model.Countries">
+      <point x="0.0" y="81.0" />
+      <point x="880.0" y="1106.6666666666667" />
+      <point x="77.0" y="-13.333333333333314" />
+    </edge>
+    <edge source="com.company.Model.Contacts" target="com.company.Model.Countries">
+      <point x="-13.333333333333258" y="48.0" />
+      <point x="1186.6666666666667" y="1200.0" />
+      <point x="560.0" y="1200.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.company.Helpers.Database" target="com.company.Model.ContactsList">
+      <point x="114.5" y="-40.0" />
+      <point x="1040.0" y="840.0" />
+      <point x="1040.0" y="640.0" />
+      <point x="111.0" y="40.0" />
+    </edge>
+    <edge source="com.company.Views.IIndexPageBuilder" target="com.company.Model.Contacts">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.company.Model.ContactsList" target="com.company.Helpers.Database">
+      <point x="0.0" y="48.0" />
+      <point x="0.0" y="-81.0" />
+    </edge>
+    <edge source="com.company.Views.ICurrentContactBuilder" target="com.company.Model.Contacts">
+      <point x="-162.5" y="-0.0" />
+      <point x="1200.0" y="0.0" />
+      <point x="0.0" y="-48.0" />
+    </edge>
+    <edge source="com.company.Helpers.Database" target="com.company.Model.CountriesList">
+      <point x="-114.5" y="-0.0" />
+      <point x="113.0" y="-0.0" />
+    </edge>
+    <edge source="com.company.Main" target="com.company.Control.Init">
+      <point x="0.0" y="-26.0" />
+      <point x="80.0" y="520.0" />
+      <point x="320.0" y="520.0" />
+      <point x="-40.0" y="-26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6035326086956522" x="1123.5" y="462.1026564610536" />
+  <SelectedNodes>
+    <node>com.company.Model.Contacts</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
