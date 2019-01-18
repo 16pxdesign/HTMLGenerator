@@ -3,6 +3,9 @@ package com.company.Model;
 import com.company.Helpers.Database;
 import java.util.ArrayList;
 
+/**
+ * class responsible for storing and managing the countries list
+ */
 public class CountriesList {
 
     private static CountriesList instance;
@@ -22,8 +25,10 @@ public class CountriesList {
         if(instance == null){
             instance = new CountriesList();
 
-            if (list.isEmpty() || list == null)
-            Database.getInstance().fillCountriesList();
+            if (list.isEmpty() || list == null){
+                list = Database.getInstance().getCountriesList();
+            }
+           // Database.getInstance().fillCountriesList();
         }
         return instance;
     }
@@ -47,6 +52,10 @@ public class CountriesList {
         return ps;
     }
 
+    /**
+     * Return actual list of Countries
+     * @return list of Countries
+     */
     public static ArrayList<Countries> getList() {
         return list;
     }

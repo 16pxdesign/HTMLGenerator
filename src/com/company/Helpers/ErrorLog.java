@@ -2,6 +2,9 @@ package com.company.Helpers;
 
 import java.util.ArrayList;
 
+/**
+ * The class represents errors has been created while the program was running and store it itself in log
+ */
 public class ErrorLog extends Exception {
 
     private static ArrayList<ErrorLog> log= new ArrayList<>();

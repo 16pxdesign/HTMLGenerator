@@ -31,8 +31,8 @@ public class PageBuilder implements IIndexPageBuilder, ICurrentContactBuilder {
                 "</head>\n" +
                 "<body>\n" +
                 "$body\n" +
-                "</body>\n" +
                 "<footer>$footer</footer>\n" +
+                "</body>\n" +
                 "</html>";
 
     }

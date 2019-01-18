@@ -6,7 +6,11 @@ import com.company.Model.Countries;
 import com.company.Model.CountriesList;
 
 import java.sql.*;
+import java.util.ArrayList;
 
+/***
+ * Class responsible for communication with the database
+ */
 public class Database {
     private static final String dir = System.getProperty("user.dir");
     private String URL = "jdbc:sqlite:" + dir + "\\database file\\contacts2.db";
@@ -22,7 +26,6 @@ public class Database {
 
     /**
      * Method return instance of this class
-     *
      * @return Instance of this class
      */
     public static Database getInstance() {
@@ -34,7 +37,6 @@ public class Database {
 
     /**
      * Method to open database connection
-     *
      * @return Opened database connection
      */
     private Connection openConnection() {
@@ -68,7 +70,7 @@ public class Database {
      * @return Result of query
      * @throws ErrorLog Throws error if somehow method cannot return ResultSet
      */
-    private ResultSet runQuery(String query) throws ErrorLog {
+    public ResultSet runQuery(String query) throws ErrorLog {
         Connection connection = getInstance().openConnection();
         try {
             statement = connection.createStatement();
@@ -84,14 +86,15 @@ public class Database {
 
     }
 
-    /**
-     * This method get all country list from database and fetch into list located in CountriesList
-     *
-     * @see CountriesList
-     */
-    public void fillCountriesList() {
-        String query = "select  c2.code_, c2.filename_,c2.flag_png_, c2.name_ from countries c2";
 
+    /***
+     * Method get list of Countries form database and return as List
+     * @see Countries
+     * @return
+     */
+    public ArrayList<Countries> getCountriesList() {
+        String query = "select  c2.code_, c2.filename_,c2.flag_png_, c2.name_ from countries c2";
+        ArrayList<Countries> list = new ArrayList<>();
         try {
 
             ResultSet resultSet = runQuery(query);
@@ -102,7 +105,7 @@ public class Database {
             while (resultSet.next()) {
 
                 Countries country = new Countries(resultSet.getString("code_"), resultSet.getString("filename_"), resultSet.getString("name_"));
-                CountriesList.getInstance().add(country);
+                list.add(country);
 
 
             }
@@ -112,18 +115,20 @@ public class Database {
             e.printStackTrace();
             new ErrorLog(e);
         }
+
+        return list;
     }
 
-    /**
-     * This method get all Contacts form database and fetch into list located in ContactsList
-     *
-     * @see ContactsList
+    /***
+     * Method get list of Contacts form database and return as List
+     * @see Contacts
+     * @return
      */
-    public void fillContacts() {
+    public ArrayList<Contacts> getContacts() {
 
         //view :: select c1.id, c1.first_name, c1.last_name, c1.email, c1.category, c1.countrycode from contacts c1
         String query = "select * from all_users";
-
+        ArrayList<Contacts> list = new ArrayList<>();
         try {
             ResultSet resultSet = runQuery(query);
             while (resultSet.next()) {
@@ -139,14 +144,22 @@ public class Database {
                         country);
 
                 ContactsList.getInstance().add(contact);
+               list.add(contact);
             }
         } catch (Exception e) {
             e.printStackTrace();
             new ErrorLog(e);
         }
+        return list;
+
 
     }
 
+    /***
+     * Method get single Contact form database and return it
+     * @see Contacts
+     * @return Single Contact object
+     */
     public Contacts getSingleContact() {
         ResultSet resultSet = null;
         Contacts contact = null;
@@ -174,6 +187,7 @@ public class Database {
         }
         return contact;
     }
+
 
 
 }

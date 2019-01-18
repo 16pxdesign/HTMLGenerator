@@ -13,16 +13,27 @@ import com.company.Views.PageBuilder;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Main program class in which the program starts.
+ */
 public class Main {
 
+    /**
+     * Main program method in which the program starts.
+     * @param args
+     */
     public static void main(String[] args) {
 
         Init init = new Init();
         //init.displayRawContacts();
         //init.displaySingleContact();
-        //init.generateIndexHTML();
+        init.displayIndexPage();
         //init.generateDetailPages();
 
-init.saveAllPages();
+
+        ArrayList<Page> pages = init.generateDetailPages();
+        pages.add(init.generateIndexHTML());
+        init.saveAllPages(pages);
+
     }
 }

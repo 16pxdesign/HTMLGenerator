@@ -4,6 +4,9 @@ import com.company.Helpers.Database;
 
 import java.util.ArrayList;
 
+/**
+ * class responsible for storing and managing the contact list
+ */
 public class ContactsList {
 
     private static ContactsList instance;
@@ -25,7 +28,8 @@ public class ContactsList {
             instance = new ContactsList();
 
             if (list.isEmpty() || list == null)
-                Database.getInstance().fillContacts();
+                //Database.getInstance().fillContacts();
+                list = Database.getInstance().getContacts();
 
         }
 
@@ -43,7 +47,7 @@ public class ContactsList {
 
     /**
      * Method return list of all saved Contacts
-     * @return
+     * @return list of Contacts
      */
     public static ArrayList<Contacts> getList() {
         return list;
