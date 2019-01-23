@@ -25,10 +25,10 @@ public class Main {
     public static void main(String[] args) {
 
         Init init = new Init();
-        //init.displayRawContacts();
-        //init.displaySingleContact();
+        init.displayRawContacts();
+        init.displaySingleContact();
         init.displayIndexPage();
-        //init.generateDetailPages();
+        init.generateDetailPages();
 
 
         ArrayList<Page> pages = init.generateDetailPages();
