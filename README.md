@@ -1,2 +1,2 @@
-# HTMLGenerator Assesment Project
+# HTMLGenerator Project
 Aleksy Ruszala
